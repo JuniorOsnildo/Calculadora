@@ -10,14 +10,14 @@ while (rodar)
     
     try
     {
-        opcao = int.Parse(Console.ReadLine() ?? "5");
+        opcao = int.Parse(Console.ReadLine() ?? "6");
     }
     catch
     {
         Menus.MenuOpcao();
     }
 
-    if (opcao == 5)
+    if (opcao == 6)
     {
         Console.WriteLine("fim do programa");
         rodar = false;

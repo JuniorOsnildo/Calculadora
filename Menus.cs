@@ -10,7 +10,8 @@ public class Menus
         Console.WriteLine("2 - Subtrair");
         Console.WriteLine("3 - Multiplicar");
         Console.WriteLine("4 - Dividir");
-        Console.WriteLine("5 - Sair");
+        Console.WriteLine("5 - Tabuada");
+        Console.WriteLine("6 - Sair");
         Console.Write(" -> ");
     }
 
@@ -37,16 +38,39 @@ public class Menus
 
     public static void Calculos(int opcao)
     {
-        float primeiroValor = ColetarDados();
-        float segundoValor = ColetarDados();
+        float primeiroValor;
+        float segundoValor;
 
+        
         switch (opcao)
         {
-            case 1: Sistema.Somar(primeiroValor, segundoValor); break;
-            case 2: Sistema.Sub(primeiroValor, segundoValor); break;
-            case 3: Sistema.Mult(primeiroValor, segundoValor); break;
-            case 4: Sistema.Div(primeiroValor, segundoValor); break;
-            default: Console.WriteLine("Valor invalido!"); break;
+            case 1:
+                primeiroValor = ColetarDados();
+                segundoValor = ColetarDados();
+                Sistema.Somar(primeiroValor, segundoValor);
+                break;
+            case 2:
+                primeiroValor = ColetarDados();
+                segundoValor = ColetarDados();
+                Sistema.Sub(primeiroValor, segundoValor);
+                break;
+            case 3:
+                primeiroValor = ColetarDados();
+                segundoValor = ColetarDados();
+                Sistema.Mult(primeiroValor, segundoValor);
+                break;
+            case 4:
+                primeiroValor = ColetarDados();
+                segundoValor = ColetarDados();
+                Sistema.Div(primeiroValor, segundoValor);
+                break;
+            case 5:
+                primeiroValor = ColetarDados();
+                Sistema.Tabuada(primeiroValor);
+                break;
+            default:
+                Console.WriteLine("Valor invalido!");
+                break;
         }
         Console.ReadKey();
     }
