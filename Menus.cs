@@ -12,6 +12,7 @@ public class Menus
         Console.WriteLine("4 - Dividir");
         Console.WriteLine("5 - Tabuada");
         Console.WriteLine("6 - Sair");
+        Console.WriteLine("0 - histórico");
         Console.Write(" -> ");
     }
 
@@ -41,7 +42,7 @@ public class Menus
         float primeiroValor;
         float segundoValor;
 
-        
+        Console.Clear();
         switch (opcao)
         {
             case 1:
@@ -67,6 +68,9 @@ public class Menus
             case 5:
                 primeiroValor = ColetarDados();
                 Sistema.Tabuada(primeiroValor);
+                break;
+            case 0:
+                Sistema.MostrarHistorico();
                 break;
             default:
                 Console.WriteLine("Valor invalido!");
